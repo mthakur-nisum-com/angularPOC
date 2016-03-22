@@ -1,7 +1,7 @@
-define(['angularAMD','angular-uiroute','controllers/commonController','controllers/homeController','controllers/contentController'],function(angularAMD,angularRoute,commonController,homeController,contentController){
+define(['angularAMD','angular-uiroute','controllers/commonController','controllers/homeController','controllers/contentController','controllers/profileController','controllers/userListController','directives/directiveModule','directives/userListDirective','directives/commonOverlay'],function(angularAMD,angularRoute,commonController,homeController,contentController,profileController,userListController,directiveModule,userListDirective){
 	var abc={};
-	var app=angular.module('myapp',['ui.router','commonController']);
-	console.log(commonController);
+	console.log(userListDirective)
+	var app=angular.module('myapp',['ui.router','commonController','directiveModule']);
 	app.config(function($stateProvider, $urlRouterProvider){
 		$stateProvider.state('home',{
 				url: '',
@@ -26,9 +26,29 @@ define(['angularAMD','angular-uiroute','controllers/commonController','controlle
 				url:'/profile',
 				/*templateUrl:'../templates/home.html',
 				controller:'homeController'*/
+
 				views:{
 					'content@':{
-						 templateUrl: '../js/templates/profileForm.html'
+						 templateUrl: '../js/templates/profileForm.html',
+						 controller: "profileController as contentCtrl"
+					},
+					'footer@':{
+						templateUrl:''
+					}
+				}
+		})
+		.state('home.users',{
+				url:'/users',
+				/*templateUrl:'../templates/home.html',
+				controller:'homeController'*/
+
+				views:{
+					'content@':{
+						 templateUrl: '../js/templates/userList.html',
+						 controller: "userListController as contentCtrl"
+					},
+					'footer@':{
+						templateUrl:''
 					}
 				}
 		});

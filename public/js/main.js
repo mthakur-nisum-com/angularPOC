@@ -7,14 +7,23 @@ require.config({
         'angular-resource' : 'js/lib/angular-resource.min',
         'angularAMD': '//cdn.jsdelivr.net/angular.amd/0.2.0/angularAMD.min',
         'angular-uiroute':"../js/lib/angular-ui-router",
-        'controllers':'../js/controllers'
+        'controllers':'../js/controllers',
+        'directives':'../js/directives',
+        'jquery':'../js/lib/jquery',
+        'jqueryUI':'../js/lib/jquery-ui'
     },
     
     shim: {
         'angularAMD': ['angular'],
         'angular-route': ['angular'],
-        'angular-uiroute':['angular']
-       /* 'controller/homeController':['controller/commonController']*/
+        'angular-uiroute':['angular'],
+        'jqueryUI':['jquery'],
+        'jquery':{
+            'exports':'$'
+        },
+        'jqueryUI':{
+            'exports':'jqueryUI'
+        }
     },
     
     // kick start application

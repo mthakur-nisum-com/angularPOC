@@ -9,7 +9,6 @@
 
 });*/
 define(['controllers/commonController'],function(commonController){
-	 commonController.controller("homeController",['$scope',function($scope){
-	 	
+	 return commonController.controller("homeController",['$scope',function($scope){
 	}]);
 });

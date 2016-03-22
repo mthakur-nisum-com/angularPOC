@@ -1,0 +1,9 @@
+<div class="row">
+<ul class="row">
+	
+	<user-List-Directive ng-repeat="userObj in userList" first-Name="{{userObj.firstName}}" last-Name="{{userObj.lastName}}" user-Id="{{userObj.userId}}" user-City={{userObj.City}}  user-details="{{userObj}}" ctrl-fn="ctrlFn(userObj)"> </user-List-Directive>
+	<common-Overlay ng-show="modalShown" ng-model="modalShown" height="500px" width="500px" hide-Overlay="hideOverlay()">
+		<p>hello</p>
+	</common-Overlay>
+</ul>
+</div>

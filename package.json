@@ -9,9 +9,12 @@
   "author": "",
   "license": "BSD-2-Clause",
   "dependencies": {
-    "express": "~4.13.4",
     "body-parser": "~1.15.0",
-    "path":"*",
-    "ejs":"*"
+    "ejs": "*",
+    "events": "^1.1.0",
+    "express": "~4.13.4",
+    "flux": "^2.1.1",
+    "nodemon": "^1.9.1",
+    "path": "*"
   }
 }

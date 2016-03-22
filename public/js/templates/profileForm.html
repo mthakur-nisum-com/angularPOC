@@ -7,7 +7,7 @@
 					<label>First Name</label>
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-6">
-					<input type="text" name="firstName" class="form-control" />
+					<input type="text" name="firstName" class="form-control" ng-model="profileObj.firstName"/>
 				</div>
 			</div>
 			<div class="row form-group">
@@ -15,7 +15,7 @@
 					<label>Last Name</label>
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-6">
-					<input type="text" name="lastName" class="form-control" />
+					<input type="text" name="lastName" class="form-control" ng-model="profileObj.lastName" />
 				</div>
 			</div>
 			<div class="row form-group">
@@ -23,7 +23,7 @@
 					<label>Address Line1</label>
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-6">
-					<input type="text" name="addressLine1" class="form-control" />
+					<input type="text" name="addressLine1" class="form-control" ng-model="profileObj.address.addressLine1"/>
 				</div>
 			</div>
 			<div class="row form-group">
@@ -31,7 +31,7 @@
 					<label>Address Line2</label>
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-6">
-					<input type="text" name="addressLine2" class="form-control" />
+					<input type="text" name="addressLine2" class="form-control" ng-model="profileObj.address.addressLine2"/>
 				</div>
 			</div>
 			<div class="row form-group">
@@ -39,7 +39,7 @@
 					<label>City</label>
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-6">
-					<input type="text" name="city" class="form-control" />
+					<input type="text" name="city" class="form-control" ng-model="profileObj.address.city"/>
 				</div>
 			</div>
 			<div class="row form-group">
@@ -47,7 +47,7 @@
 					<label>password</label>
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-6">
-					<input type="text" name="password" class="form-control" />
+					<input type="password" name="password" class="form-control"  ng-model="profileObj.password"/>
 				</div>
 			</div>
 			<div class="row form-group">
@@ -55,7 +55,15 @@
 					<label>Confirm Password</label>
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-6">
-					<input type="text" name="verifyPassword" class="form-control" />
+					<input type="password" name="verifyPassword" class="form-control" ng-model="profileObj.verifyPassword"/>
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<label>Press Continue</label>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<input type="button" id="processProfileBtn" class="btn" ng-click="processProfile(profileObj)" value="continue"/>
 				</div>
 			</div>
 		</form>
